@@ -12,3 +12,7 @@ Has been tested under Docker on a Mac with the included Dockerfile
 
 ex to run assuming build has image name 'azcmd'
 docker run -v /localfile/appsettings.json:/app/appsettings.json -v /localfile:/app/data azcmd
+
+To build a single exe file:
+dotnet publish -c release --self-contained false /p:PublishTrimmed=true
+
